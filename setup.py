@@ -4,7 +4,7 @@ Setup script for the causal_impact_engine package.
 from setuptools import find_packages, setup
 
 try:
-    with open("causal_impact_engine/README.md", "r", encoding="utf-8") as fh:
+    with open("README.md", "r", encoding="utf-8") as fh:
         long_description = fh.read()
 except FileNotFoundError:
     long_description = """
@@ -38,17 +38,21 @@ setup(
     ],
     python_requires=">=3.8",
     install_requires=[
-        "numpy>=1.20.0",
-        "pandas>=1.3.0",
-        "matplotlib>=3.4.0",
-        "seaborn>=0.11.0",
-        "statsmodels>=0.13.0",
-        "scikit-learn>=1.0.0",
-        "pymc>=5.0.0",
-        "arviz>=0.12.0",
-        "causalimpact>=0.3.0",
-        "streamlit>=1.10.0",
-        "plotly>=5.5.0",
+        "numpy>=1.24.0",
+        "pandas>=2.0.0",
+        "matplotlib>=3.7.0",
+        "seaborn>=0.12.0",
+        "statsmodels>=0.14.0",
+        "scikit-learn>=1.3.0",
+        "pymc>=5.7.0",
+        "arviz>=0.14.0",
+        "pytensor>=2.14.0",
+        "causalimpact>=0.2.6",
+        "streamlit>=1.25.0",
+        "plotly>=5.16.0",
+        "altair>=5.5.0",
+        "xarray>=2024.7.0",
+        "scipy>=1.10.0",
     ],
     extras_require={
         "dev": [
@@ -59,4 +63,5 @@ setup(
             "mypy>=0.910",
         ],
     },
+    include_package_data=True,
 ) 
